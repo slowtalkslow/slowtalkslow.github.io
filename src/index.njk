@@ -1,0 +1,78 @@
+---
+layout: base.njk
+templateEngineOverride: md, njk
+---
+{% include 'sitenav.njk' %}
+
+<main tabindex="-1" id="main-content">
+  <div class="[ hero ] [ center-xy wrapper ]">
+    <div class="hero__text">
+      <h1 class="hero__hey">Hey! I’m Soon 👾 </h1>
+      <h2 class="hero__about-title">
+        I’m a postgraduate <br> 
+        &amp; web developer <br>
+        &amp; generative art lover <br>
+        <span>writing the web creative coding</span> <br>
+        &amp; <span>painting with algorithms</span>. <br> 
+      </h2>
+      <p class="hero__about">
+        Nice to meet ya! <br> Have a nice day  &amp; a cup of coconut water ~
+      </p>
+      <div class="hero__buttons">
+        <a href="/" class="btn">Just click</a>
+        <a href="/mailto:slowtalkslow@gmail.com" class="btn btn--secondary">Email me</a>
+      </div>
+    </div>
+  </div>
+  <div class="home wrapper">
+    <div class="recently-published">
+      <h2 class="section-heading">Recently Published</h2>
+      <div class="recently-published__posts">
+        {%- for page in collections.all -%}
+        {% if page.data.title %}
+        <a class="recently-published__post" href="{{ page.url }}">
+          <h3 class="recently-published__post-title">{{ page.data.title }}</h3>
+          <p class="recently-published__post-excerpt">{{ page.data.description }}</p>
+          <div class="recently-published__post-footer">
+            <p class="recently-published__post-date">{{ page.date.toLocaleDateString() }}</p>
+          </div>
+          <div class="recently-published__post-arrow center-xy">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z" fill="#fff"></path>
+            </svg>
+          </div>
+        </a>
+        {% endif %}
+        {%- endfor -%}
+        <a class=" [ recently-published__view-all ] [ center-xy ]" href="/writing">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M41.3,-38.7C53.5,-29,63.5,-14.5,65.7,2.2C67.8,18.8,62.2,37.7,49.9,51.2C37.7,64.8,18.8,73,-1.1,74.1C-21.1,75.2,-42.3,69.3,-54.5,55.8C-66.7,42.3,-70,21.1,-68.4,1.6C-66.7,-17.9,-60.2,-35.8,-48,-45.5C-35.8,-55.2,-17.9,-56.6,-1.7,-54.9C14.5,-53.2,29,-48.4,41.3,-38.7Z" transform="translate(100 100)"></path>
+          </svg>
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.1,-50.8C59.3,-36.9,63.4,-18.4,63.1,-0.3C62.9,17.9,58.3,35.8,47,43C35.8,50.2,17.9,46.7,0.1,46.7C-17.8,46.6,-35.5,50,-47,42.7C-58.6,35.5,-63.8,17.8,-63,0.8C-62.1,-16.1,-55.2,-32.2,-43.7,-46.1C-32.2,-60.1,-16.1,-71.9,1.2,-73C18.4,-74.2,36.9,-64.7,48.1,-50.8Z" transform="translate(100 100)"></path>
+          </svg>
+          <span>
+            View all tutorials &amp; posts
+          </span>
+        </a>
+      </div></div>
+    <div class="explore-tags">
+      <div class="explore-tags__sticky">
+        <h2 class="section-heading section-heading--variant">Explore Topics</h2>
+        <ul class="explore-tags__tags">
+          {%- for tag in collections.tagList -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <li class="explore-tags__tag">
+            <a class="post-tag" href="{{ tagUrl }}">{{ tag }}</a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+    <svg class="home__blob" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M164.8 53.5067C197.188 43.2423 236.076 52.4206 271.876 70.7192C307.855 89.1206 340.671 116.357 351.482 151.572C362.398 186.604 351.414 229.432 328.356 260.032C305.298 290.632 270.374 308.639 233.318 319.136C196.157 329.816 156.967 332.803 117.776 319.58C78.5847 306.357 39.4665 277.21 33.2192 241.944C27.0765 206.497 53.8798 165.217 80.2252 129.724C106.496 93.9455 132.308 63.9533 164.8 53.5067Z" stroke="#E6E5EB" stroke-miterlimit="2" stroke-linejoin="round" stroke-dasharray="4 4"/></svg>
+    </svg>
+  </div>
+</main>
+
+{% include 'footer.njk' %}
