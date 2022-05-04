@@ -2,26 +2,18 @@
 const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const codepenEmbed = require("@kevingimbel/eleventy-plugin-codepen");
 
 // Helper packages
 const slugify = require("slugify");
 // Local utilities/data
 const packageVersion = require("./package.json").version;
 
-const openInCodepen = require("@11tyrocks/eleventy-plugin-open-in-codepen");
-
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(socialImages);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(openInCodepen, {
-    siteUrl: "YourSite.dev",
-    siteTitle: "Your Site",
-    siteTag: "yoursite",
-    buttonClass: "your-button-class",
-    buttonIconClass: "your-button-icon-class",
-  });
+  eleventyConfig.addPlugin(codepenEmbed);
 
   eleventyConfig.addWatchTarget("./src/sass/");
 

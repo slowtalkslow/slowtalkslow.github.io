@@ -54,6 +54,7 @@
     "not IE 11"
   ],
   "dependencies": {
-    "@11tyrocks/eleventy-plugin-open-in-codepen": "^1.0.0"
+    "@11tyrocks/eleventy-plugin-open-in-codepen": "^1.0.0",
+    "@kevingimbel/eleventy-plugin-codepen": "^1.0.1"
   }
 }

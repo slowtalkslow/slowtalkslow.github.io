@@ -9,7 +9,7 @@ tags:
 
 > Tutorial from [Create a Generative Landing Page & WebGL Powered Background](https://georgefrancis.dev/writing/create-a-generative-landing-page-and-webgl-powered-background/ "Create a Generative Landing Page & WebGL Powered Background")
 
-<https://codepen.io/georgedoescode/full/XWNmvro>
+{% codepen "https://codepen.io/slowtalkslow/pen/KKQKdGM" %}
 
 这种**frosty**效果类似磨砂玻璃，是一种表面粗糙不平整的半透明玻璃，其表面不平整，光线通过磨砂玻璃被反射后向四面八方散去。
 
