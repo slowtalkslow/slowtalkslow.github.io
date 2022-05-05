@@ -17,7 +17,7 @@ permalink: /tags/{{ tag }}/
     {%- for page in collections[ tag ] -%}
     {% if page.data.title %}
     <div class="writing__post">
-      <p class="writing__post-date">{{ page.date.toLocaleDateString() }}</p>
+      <p class="writing__post-date">{% date page.date %}</p>
       <a href="{{ page.url }}">
         <h2 class="writing__post-title">{{ page.data.title }}</h2>
         <p class="writing__post-description">{{ page.data.description }}</p>
