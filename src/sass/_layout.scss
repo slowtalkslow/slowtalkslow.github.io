@@ -332,6 +332,9 @@ input,button,textarea,select{
   font-size:var(--text-base);
   margin-right:var(--spacing-12)
 }
+.nav__home img {
+  width:10%;
+}
 
 .nav__home:hover,.nav__home:focus{
   color:var(--purple)
@@ -828,12 +831,6 @@ main:focus{
 @media only screen and (max-width: 1344px) {
   .hero {
     padding: 0;
-
-    &__avatar {
-      &-blob {
-        display: none;
-      }
-    }
   }
 
   .home {
@@ -888,14 +885,8 @@ main:focus{
       grid-row: 1;
       margin: 0;
       width: 100%;
-      padding-left: 0;
+      padding-left: 30px;
       margin-bottom: var(--spacing-20);
-
-      &-me {
-        display: block;
-        max-width: 75%;
-        margin: 0 auto;
-      }
     }
 
     &__about-title {

@@ -1,0 +1,175 @@
+$white:#F0EFDA;
+$black:#272B24;
+$shadow:#191D18;
+$pink:#FFAA9E;
+
+.ghost {
+   display: flex;
+   position: relative;
+   width:160px;
+   height:300px;
+   left: 50px;
+   top: -30px;
+   .body {
+      position: relative;
+      width:160px;
+      height:200px;
+      border-top-right-radius:80px;
+      border-top-left-radius:80px;
+      
+      background-color:$white;
+      
+      animation:float 4s ease infinite;
+      .face {
+         display:flex;
+         flex-wrap:wrap;
+         
+         position: absolute;
+         top:67px;
+         left:37px;
+         
+         width:72px;
+         height:41px;
+         
+         .eye {
+            width:20px;
+            height:20px;
+            border-radius:100%;
+            
+            background-color:$black;
+            &.left {
+               margin-right:32px;
+            }
+         }
+         .smile {
+            margin-top:6px;
+            
+            width:32px;
+            height:16px;
+            margin-left:20px;
+            border-bottom-left-radius:16px 12px;
+            border-bottom-right-radius:16px 12px;
+            border-top-left-radius:4px;
+            border-top-right-radius:4px;
+            
+            background-color:$black;
+         }
+         .rosy {
+            position: absolute;
+            top:28px;
+            
+            width:22px;
+            height:8px;
+            border-radius:100%;
+            
+            background-color:$pink;
+            &.left {
+               left:-6px;
+               transform:rotate(-8deg);
+            }
+            &.right {
+               right:-6px;
+               transform:rotate(8deg);
+            }
+         }
+      }
+      
+      .arm {
+         position: absolute;
+         top:120px;
+         width:60px;
+         height:40px;
+         background-color:$white;
+         
+         &.left {
+            left:-4px;
+            
+            border-radius:60% 100%;
+            
+            animation:arms-left 4s ease infinite;
+         }
+         &.right {
+            right:-65px;
+            
+            border-radius:100% 60%;
+            
+            animation:arms-right 4s ease infinite;
+         }
+      }
+      
+      .bottom {
+         display:flex;
+         position: absolute;
+         top:100%;
+         left:0px;
+         right:-1px; //Shhhh
+         
+         div {
+            flex-grow:1;
+            position: relative;
+            top:-14px;
+            
+            height:28px;
+            border-radius:100%;
+            
+            background-color:$white;
+            
+            &:nth-child(2n) {
+               top:-10px;
+               
+               margin:0 -2px;
+               border-top:10px solid $white;
+               
+               background:transparent;
+            }
+         }
+      }
+   }
+   .shadow {
+      position: absolute;
+      bottom:0;
+      left:50%;
+      
+      width:200px;
+      height:12px;
+      border-radius:100%;
+      
+      background-color:$shadow;
+      
+      animation:shadow 4s ease infinite;
+   }
+}
+
+@keyframes float {
+   0%,100% {
+      top:0px;
+   }
+   40% {
+      top:-40px;
+   }
+}
+@keyframes arms-left {
+   0%,100% {
+      transform:translate(-50%,-50%) rotate(50deg);
+   }
+   40% {
+      transform:translate(-50%,-50%) rotate(40deg);
+   }
+}
+@keyframes arms-right {
+   0%,100% {
+      transform:translate(-50%,-50%) rotate(-50deg);
+   }
+   40% {
+      transform:translate(-50%,-50%) rotate(-40deg);
+   }
+}
+
+@keyframes shadow {
+   0%,100% {
+      transform:translateX(-50%) scale(1);
+   }
+   40% {
+      transform:translateX(-50%) scale(0.5);
+   }
+}
