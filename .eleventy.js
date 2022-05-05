@@ -31,7 +31,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.png");
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addShortcode("date", (date) => {
+    const y = date.getFullYear();
+    const m = date.getMonth();
+    const d = date.getDate();
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct','Nov', 'Dec'];
+    const res = months[m] + " " + d + ", " + y;
+    return `${res}`;
+  });
   eleventyConfig.addShortcode("packageVersion", () => `v${packageVersion}`);
+
 
   eleventyConfig.addCollection("tagList", (collection) => {
     let tagSet = new Set();

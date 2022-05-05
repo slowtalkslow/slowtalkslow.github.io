@@ -9,14 +9,13 @@ templateEngineOverride: md, njk
     <div class="hero__text">
       <h1 class="hero__hey">Hey! I’m Soon 👾 </h1>
       <h2 class="hero__about-title">
-        I’m a postgraduate <br> 
-        &amp; web developer <br>
-        &amp; generative art lover <br>
-        <span>writing the web creative coding</span> <br>
-        &amp; <span>painting with algorithms</span>. <br> 
+        I’m a postgraduate<br>
+        <span>learning web processing algorithms</span><br>
+        &amp; a generative art lover<br>
+        <span>writing web notional artistic coding</span>. <br>
       </h2>
       <p class="hero__about">
-        Nice to meet ya! <br> Have a nice day  &amp; a cup of coconut water ~
+        Nice to meet ya, wish u have a nice day ! 
       </p>
       <div class="hero__buttons">
         <a href="/" class="btn">Just click</a>
@@ -37,7 +36,7 @@ templateEngineOverride: md, njk
           <h3 class="recently-published__post-title">{{ page.data.title }}</h3>
           <p class="recently-published__post-excerpt">{{ page.data.description }}</p>
           <div class="recently-published__post-footer">
-            <p class="recently-published__post-date">{{ page.date.toLocaleDateString() }}</p>
+            <p class="recently-published__post-date">{% date page.date %}</p>
           </div>
           <div class="recently-published__post-arrow center-xy">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,10 +54,11 @@ templateEngineOverride: md, njk
             <path d="M48.1,-50.8C59.3,-36.9,63.4,-18.4,63.1,-0.3C62.9,17.9,58.3,35.8,47,43C35.8,50.2,17.9,46.7,0.1,46.7C-17.8,46.6,-35.5,50,-47,42.7C-58.6,35.5,-63.8,17.8,-63,0.8C-62.1,-16.1,-55.2,-32.2,-43.7,-46.1C-32.2,-60.1,-16.1,-71.9,1.2,-73C18.4,-74.2,36.9,-64.7,48.1,-50.8Z" transform="translate(100 100)"></path>
           </svg>
           <span>
-            View all tutorials &amp; posts
+            View all
           </span>
         </a>
-      </div></div>
+      </div>
+    </div>
     <div class="explore-tags">
       <div class="explore-tags__sticky">
         <h2 class="section-heading section-heading--variant">Explore Topics</h2>
@@ -72,9 +72,6 @@ templateEngineOverride: md, njk
         </ul>
       </div>
     </div>
-    <svg class="home__blob" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M164.8 53.5067C197.188 43.2423 236.076 52.4206 271.876 70.7192C307.855 89.1206 340.671 116.357 351.482 151.572C362.398 186.604 351.414 229.432 328.356 260.032C305.298 290.632 270.374 308.639 233.318 319.136C196.157 329.816 156.967 332.803 117.776 319.58C78.5847 306.357 39.4665 277.21 33.2192 241.944C27.0765 206.497 53.8798 165.217 80.2252 129.724C106.496 93.9455 132.308 63.9533 164.8 53.5067Z" stroke="#E6E5EB" stroke-miterlimit="2" stroke-linejoin="round" stroke-dasharray="4 4"/></svg>
-    </svg>
   </div>
 </main>
 

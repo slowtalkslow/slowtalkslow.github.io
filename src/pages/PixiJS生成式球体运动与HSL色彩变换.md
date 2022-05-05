@@ -1,13 +1,12 @@
 ---
-title: "Create a Generative Landing Page & WebGL Powered Background"
-description: "Tutorial from Create a Generative Landing Page & WebGL Powered Background "
+title: "PixiJS生成式球体运动与HSL色彩变换"
+description: "Create a Generative Landing Page & WebGL Powered Background"
 date: Created
 tags: 
   - Tutorial
-  - JavaScript  
+  - JavaScript
+  - CSS
 ---
-
-> Tutorial from [Create a Generative Landing Page & WebGL Powered Background](https://georgefrancis.dev/writing/create-a-generative-landing-page-and-webgl-powered-background/ "Create a Generative Landing Page & WebGL Powered Background")
 
 {% codepen "https://codepen.io/slowtalkslow/pen/KKQKdGM" %}
 
@@ -23,7 +22,7 @@ tags:
 
 Let's build !
 
-# ❄️ Introduce
+## Introduce
 
 [PixiJS](https://www.npmjs.com/package/pixi.js/v/5.0.0-rc "PixiJS") - A powerful graphics library built on WebGL, we will use it to render our orbs.
 
@@ -35,11 +34,9 @@ Let's build !
 
 [debounce](https://www.npmjs.com/package/debounce "debounce") - A  JavaScript debounce function.
 
-# ❄️ Install
+## Install
 
-CodePen
-
-JS File 引入以下部分
+CodePen : JS File 引入以下部分
 
 ```javascript
 import * as PIXI from 'https://cdn.skypack.dev/pixi.js';
@@ -49,9 +46,7 @@ import hsl from 'https://cdn.skypack.dev/hsl-to-hex';
 import debounce from 'https://cdn.skypack.dev/debounce';
 ```
 
-Own Environment
-
-通过npm安装
+Own Environment : 通过npm安装
 
 ```bash
 npm i pixi.js @pixi/filter-kawase-blur simplex-noise hsl-to-hex debounce
@@ -67,7 +62,7 @@ import hsl from 'hsl-to-hex';
 import debounce from 'debounce';
 ```
 
-# ❄️ A blank canvas
+## A blank canvas
 
 新建index.html 并添加一个 \<canvas> 元素
 
@@ -99,7 +94,7 @@ const app = new PIXI.Application({
 });
 ```
 
-# ❄️ Some helpful utilities
+## Some helpful utilities
 
 random将返回一个有限范围内的随机数
 
@@ -117,7 +112,7 @@ function map(n, start1, end1, start2, end2) {
 }
 ```
 
-# ❄️ Creating the Orb class
+## Creating the Orb class
 
 创建一个球类，它拥有x值、y值、比例scale、填充颜色fill、半径radius、一组边界bounds
 
@@ -255,7 +250,7 @@ render() {
 
 render函数在每一帧上都会画一个新的圆
 
-# ❄️ Creating some orbs!
+## Creating some orbs!
 
 调用app.stage.addChild将每个实例添加到我们的canvas中
 
@@ -274,7 +269,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-# ❄️ Animation! Or, no animation?
+## Animation! Or, no animation?
 
 现在我们有了 10 个新球体，我们可以开始为它们设置动画
 
@@ -301,7 +296,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 }
 ```
 
-# ❄️ Webpack
+## Webpack
 
 安装webpack
 
@@ -357,7 +352,7 @@ VSCode添加Live Server扩展，就可以在web上运行index.html
 
 ![](/img/frosty1.png)
 
-# ❄️ Adding the blur
+## Adding the blur
 
 现在我们给canvas加上模糊滤镜
 
@@ -371,7 +366,7 @@ app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
 
 ![](/img/frosty2.png)
 
-# ❄️ A Generative color palette using HSL
+## A Generative color palette using HSL
 
 为了给我们的项目引入一些颜色，我们将创建一个ColorPalette类
 
@@ -461,7 +456,7 @@ done!
 
 ![](/img/frosty3.png)
 
-# ❄️ Building the rest of the page
+## Building the rest of the page
 
 ```html
 <div class="overlay">
@@ -695,7 +690,7 @@ a {
 }
 ```
 
-# ❄️ Randomising the colors in real-time
+## Randomising the colors in real-time
 
 监听按钮上的click事件，会生成一组新颜色，设置每个球体的填充色为新值
 
@@ -712,6 +707,10 @@ document
 });
 ```
 
-# ❄️ Take a look
+## Take a look
 
 ![](/img/frosty4.png)
+
+## Tutorial from 
+
+[Create a Generative Landing Page & WebGL Powered Background](https://georgefrancis.dev/writing/create-a-generative-landing-page-and-webgl-powered-background/ "Create a Generative Landing Page & WebGL Powered Background")
