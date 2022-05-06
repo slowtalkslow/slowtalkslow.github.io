@@ -173,3 +173,27 @@ $pink:#FFAA9E;
       transform:translateX(-50%) scale(0.5);
    }
 }
+
+@media only screen and (max-width: 1104px) {
+   .ghost {
+      display: none;
+   }
+}
+
+@media only screen and (max-width: 960px) {
+   .ghost {
+      display: none;
+   }
+}
+
+@media only screen and (max-width: 768) {
+   .ghost {
+      display: none;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .ghost {
+      display: none;
+   }
+}
