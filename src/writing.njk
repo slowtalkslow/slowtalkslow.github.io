@@ -9,8 +9,7 @@ layout: base.njk
       <h1 class="writing__heading section-heading section-heading--variant">Writing</h1>
     </div>
     <ul class="writing__posts">
-      {%- for page in collections.all -%}
-      {% if page.data.title %}
+      {%- for page in collections.recent -%}
       <div class="writing__post">
         <p class="writing__post-date">{% date page.date %}</p>
         <a href="{{ page.url }}">
@@ -27,7 +26,6 @@ layout: base.njk
           {%- endfor -%}
          </ul>
       </div>
-      {% endif %}
       {%- endfor -%}
     </ul>
   </div>

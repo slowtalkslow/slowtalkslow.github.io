@@ -9,7 +9,7 @@ const slugify = require("slugify");
 const packageVersion = require("./package.json").version;
 
 const defaults = {
-  height: 500,
+  height: 600,
   theme: 'light',
   tabs: 'result',
   user: 'Soon',
@@ -44,7 +44,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", (collection) => {
     let tagSet = new Set();
-    collection.getAll().forEach(function(item) {
+    collection.getAll().forEach( item => {
       if( "tags" in item.data ) {
         let tags = item.data.tags;
         if( typeof tags === "string" ) {
@@ -57,6 +57,17 @@ module.exports = function (eleventyConfig) {
       }
     });
     return [...tagSet].sort();
+  });
+
+  eleventyConfig.addCollection("recent", (collection) => {
+    let recent = [];
+    collection.getAll().forEach( item => {
+      if(item.data.title) {
+        recent.push(item);
+      }
+    })
+   
+    return recent.sort((a,b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("slug", (str) => {

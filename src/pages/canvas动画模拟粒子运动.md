@@ -1,6 +1,6 @@
 ---
-title: "使用canvas动画模拟雨滴下落及落地飞溅"
-description: "Simulate rainfall and splashdown with canvas animation"
+title: "canvas动画模拟粒子运动"
+description: "Simulate particle motion with canvas animation"
 date: Created
 tags: 
   - Tutorial
@@ -10,7 +10,7 @@ tags:
 
 
 
-### Initialize canvas
+## Initialize canvas
 
 在HTML中添加 \<canvas> 元素并通过其id获取到canvas元素
 
@@ -24,7 +24,7 @@ let ctx = canvas.getContext('2d');
 
 
 
-### Start with line
+## Start with line
 
 为了在canvas上模拟出下雨的动画，可以将三维世界中雨滴的下落抽象化为二维平面中直线的下落
 
@@ -62,7 +62,7 @@ draw(ctx) {
 
 
 
-### Class Rain&#x20;
+## Class Rain&#x20;
 
 创建Rain类，每滴雨由它的pos和pre作为路径的两头，为了模拟出自由落体运动，设置增量increament
 
@@ -93,7 +93,7 @@ class Rain {
 
 
 
-### Move raindrop&#x20;
+## Move raindrop&#x20;
 
 draw() 依次绘制rain数组中的雨滴，神奇的requestAnimationFrame() 一般会按照每秒60次的频率执行回调函数，这样我们就能在画布上看见雨滴从天而降的动画啦
 
@@ -120,7 +120,7 @@ let draw = () => {
 
 
 
-### Rain splash
+## Rain splash
 
 落在地上的雨水会四处飞溅，创建Drop类来描述溅起来的雨滴，我们将这些雨滴抽象为小圆点
 
@@ -192,7 +192,13 @@ let draw = () => {
 
 
 
-### Done！Take a look  👀
+## Take a look  👀
+
+在雨滴的基础上还尝试了一下雪花 ☃️ 和烟火 🎆 
 
 {% codepen "https://codepen.io/slowtalkslow/pen/eYVpOPP" %}
+
+{% codepen "https://codepen.io/slowtalkslow/pen/JjpGEpo" %}
+
+{% codepen "https://codepen.io/slowtalkslow/pen/eYVJvJm" %}
 

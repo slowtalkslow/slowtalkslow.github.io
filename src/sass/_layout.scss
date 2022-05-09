@@ -835,12 +835,6 @@ main:focus{
 
   .home {
     grid-gap: 0;
-
-    &__blob {
-      bottom: -16rem;
-      right: 2rem;
-      width: 14rem;
-    }
   }
 
   .recently-published {
@@ -873,6 +867,10 @@ main:focus{
   .hero {
     position: relative;
     grid-template-columns: 34rem 1fr;
+
+    &__avatar {
+      display: none;
+    }
   }
 }
 
@@ -881,12 +879,7 @@ main:focus{
     grid-template-columns: 1fr;
 
     &__avatar {
-      position: relative;
-      grid-row: 1;
-      margin: 0;
-      width: 100%;
-      padding-left: 30px;
-      margin-bottom: var(--spacing-20);
+      display: none;
     }
 
     &__about-title {
@@ -898,6 +891,10 @@ main:focus{
 @media only screen and (max-width: 768px) {
   .hero__hey {
     font-size: var(--text-lg);
+  }
+
+  .hero__avatar {
+    display: none;
   }
 
   .section-heading {
@@ -974,6 +971,10 @@ main:focus{
   .hero__about {
     margin-bottom: var(--spacing-11);
     color: var(--gray-700);
+  }
+
+  .hero__avatar {
+    display: none;
   }
 
   .hero__buttons {

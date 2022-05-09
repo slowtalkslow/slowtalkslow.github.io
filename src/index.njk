@@ -30,8 +30,7 @@ templateEngineOverride: md, njk
     <div class="recently-published">
       <h2 class="section-heading">Recently Published</h2>
       <div class="recently-published__posts">
-        {%- for page in collections.all -%}
-        {%- if page.data.title -%}
+        {%- for page in collections.recent -%}
         <a class="recently-published__post" href="{{ page.url }}">
           <h3 class="recently-published__post-title">{{ page.data.title }}</h3>
           <p class="recently-published__post-excerpt">{{ page.data.description }}</p>
@@ -44,7 +43,6 @@ templateEngineOverride: md, njk
             </svg>
           </div>
         </a>
-        {%- endif -%}
         {%- endfor -%}
         <a class=" [ recently-published__view-all ] [ center-xy ]" href="/writing">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
