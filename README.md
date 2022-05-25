@@ -1,5 +1,3 @@
-My Own Website bulit by Netlify 👇
-
-https://slowtalkslow.netlify.app/
+My Own Website bulit by Netlify 
 
 Nice to Meet U ~
