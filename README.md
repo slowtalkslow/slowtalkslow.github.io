@@ -1,10 +1,17 @@
 ### My Own Website bulit by Netlify 
 
+✨ ✨ ✨ 
 
-Some Writings 😊
+Some Writings ❥
 
-Some Thoughts 🤔
+😊
 
-Some Loves 🥰
+Some Thoughts ❥
+
+🤔
+
+Some Loves ❥
+
+🥰
 
 Nice to Meet U ~
