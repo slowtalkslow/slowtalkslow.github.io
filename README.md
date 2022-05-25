@@ -14,4 +14,8 @@ Some Loves ❥
 
 🥰
 
-Nice to Meet U ~
+Click  [🔗 slowtalkslow ](https://slowtalkslow.netlify.app/)
+
+✨ ✨ ✨ 
+
+Nice to meet u ~
