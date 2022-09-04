@@ -1,21 +1,19 @@
 ### My Own Website bulit by Netlify 
 
-✨ ✨ ✨ 
+✨ ✨ ✨ ✨ ✨ ✨ 
 
-Some Writings ❥
+✨ Some Writings ✨ 
 
-😊
+✨ ✨ ✨ ✨ ✨ ✨ 
 
-Some Thoughts ❥
+✨ Some Thoughts ✨ 
 
-🤔
+✨ ✨ ✨ ✨ ✨ ✨ 
 
-Some Loves ❥
+✨ Some Magics ✨ 
 
-🥰
+✨ ✨ ✨ ✨ ✨ ✨ 
 
-Click  [🔗 slowtalkslow ](https://slowtalkslow.netlify.app/)
+✨ [Nice to meet u](https://slowtalkslow.netlify.app/)✨ 
 
-✨ ✨ ✨ 
-
-Nice to meet u ~
+✨ ✨ ✨ ✨ ✨ ✨
