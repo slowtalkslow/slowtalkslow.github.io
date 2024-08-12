@@ -190,15 +190,3 @@ let draw = () => {
 }
 ```
 
-
-
-## Take a look  👀
-
-在雨滴的基础上还尝试了一下雪花 ☃️ 和烟火 🎆 
-
-{% codepen "https://codepen.io/soonoosoon/pen/eYVpOPP" %}
-
-{% codepen "https://codepen.io/soonoosoon/pen/JjpGEpo" %}
-
-{% codepen "https://codepen.io/soonoosoon/pen/eYVJvJm" %}
-
