@@ -227,4 +227,4 @@ function wrapBackward(trigger) {
 
 ## Take a look 👀
 
-{% codepen "https://codepen.io/slowtalkslow/pen/wvyMjvX?editors=0010" %}
+{% codepen "https://codepen.io/soonoosoon/pen/wvyMjvX?editors=0010" %}

@@ -1,1 +1,1 @@
-[👋](https://slowtalkslow.netlify.app/)
+[👋](https://soonoosoon.netlify.app/)
